@@ -15,9 +15,16 @@
         background-color: #ddd;
       }
       .section {
+        background-size: cover;
+        background-position: center center;
         width=100%;
         min-height:100%;
         padding-top:75px;
+      }
+
+      #intro {
+        background-image: url("https://picsum.photos/1200/600");
+        background-color: aquamarine;
       }
     </style>
 
@@ -30,6 +37,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMain"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navBarMain">
         <ul class="navbar-nav">
+          <li class="nav-item"><a href="#intro" class="nav-link">Welcome</a></li>
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item"><a href="#button" class="nav-link">Button</a></li>
           <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
@@ -45,7 +53,24 @@
           </div>
         </div>
       </section>
-
+      <section id="intro" class="section">
+        <div class="container">
+          <div class="display-3">Introduction</div>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+               nec, pellentesque eu, pretium quis, sem.</p>
+            <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+              In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+            <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+              nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+               Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+            <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+              nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+               Aliquam lorem ante, dapibus in, viverra quis, feugiat a</p>
+          </div>
+        </div>
+      </section>
       <section id="about" class="section bg-info text-light">
         <div class="container">
           <div class="display-3">About</div>
@@ -167,16 +192,34 @@
                 <label for="lastname">Last Name</label>
                 <input type="text" class="form-control" id="lastname" placeholder="Last Name">
               </div>
+              <div class="form-group">
+                <label for="message">Type your message here</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
               <button type="submit" class="btn btn-info">Submit</button>
             </form>
           </div>
         </div>
       </section>
-      <footer></footer>
-
-
-
-
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 text-md-center">
+              <h3>Need more info</h3>
+              <p>Get in roush with us 1-800-144-7685</p>
+            </div>
+            <div class="col-md-4 text-md-center">
+              <h3>Join Now</h3>
+              <div class="btn btn-primary">Go Here</div>
+            </div>
+            <div class="col-md-4 text-md-center">
+              <h3>Copyright</h3>
+              <p>(c) 2018 Company LLC</p>
+            </div>
+            <br><br>
+          </div>
+        </div>
+      </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
