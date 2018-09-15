@@ -26,6 +26,11 @@
         background-image: url("https://picsum.photos/1200/600");
         background-color: aquamarine;
       }
+
+      footer {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
     </style>
 
 
@@ -201,12 +206,13 @@
           </div>
         </div>
       </section>
+    </body>
       <footer>
         <div class="container">
           <div class="row">
             <div class="col-md-4 text-md-center">
               <h3>Need more info</h3>
-              <p>Get in roush with us 1-800-144-7685</p>
+              <p>Get in touch with us 1-800-144-7685</p>
             </div>
             <div class="col-md-4 text-md-center">
               <h3>Join Now</h3>
@@ -216,15 +222,28 @@
               <h3>Copyright</h3>
               <p>(c) 2018 Company LLC</p>
             </div>
-            <br><br>
           </div>
         </div>
       </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $('body').scrollspy({
+        target: '#myNav'
+      })
+      $('#myNav ul li a[href^="#"]').on('click', function(e){
+        e.preventDefault();
+        var t = this.hash;
+        $('html, body').animate({
+          scrollTop:$(this.hash).offset().top
+        }, 650,function () {
+            window.location.hash = t;
+        });
+      })
+    </script>
   </body>
 </html>
